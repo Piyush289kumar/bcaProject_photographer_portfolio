@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Videograph Template">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body id='cursorCursor'>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -62,7 +64,6 @@
                                         $isActiveIndex = '';
                                         break;
                                 }
-                                echo $current_page;
                                 ?>
                                 <li class=<?php echo $isActiveIndex ?>><a href="index.php">Home</a></li>
                                 <li class=<?php echo $isActiveAbout ?>><a href="about.php">About</a></li>
@@ -72,9 +73,9 @@
                             </ul>
                         </nav>
                         <div class="header__nav__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.facebook.com/jayendra.shakya.54"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/jinnu_._07?igsh=MW5pdnlvM3NuZ3MzcQ%3D%3D"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@jayendrashakya8260"><i class="fa fa-youtube-play"></i></a>
                         </div>
                     </div>
                 </div>
