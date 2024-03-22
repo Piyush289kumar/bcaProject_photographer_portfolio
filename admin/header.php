@@ -7,38 +7,11 @@ if (!isset($_SESSION['username'])) {
 $current_page = basename($_SERVER['PHP_SELF']);
 $prefix_word = "ADMIN Panel";
 switch ($current_page) {
-        // case 'add-category.php':
-        //     $page_title = "{$prefix_word} - Category Add";
-        //     break;
-        // case 'add-post.php':
-        //     $page_title = "{$prefix_word} - Post Add";
-        //     break;
-    case 'add-user.php':
-        $page_title = "{$prefix_word} - User Add";
-        break;
-        // case 'category.php':
-        //     $page_title = "{$prefix_word} - Category";
-        //     break;
-        // case 'post.php':
-        //     $page_title = "{$prefix_word} - Post";
-        //     break;
-        // case 'settings.php':
-        //     $page_title = "{$prefix_word} - Settings";
-        //     break;
-        // case 'update-category.php':
-        //     $page_title = "{$prefix_word} - Category Update";
-        //     break;
-        // case 'update-post.php':
-        //     $page_title = "{$prefix_word} - Post Update";
-        //     break;
     case 'update-user.php':
         $page_title = "{$prefix_word} - User Update";
         break;
     case 'users.php':
         $page_title = "{$prefix_word} - Users";
-        break;
-    case 'member.php':
-        $page_title = "{$prefix_word} - Members";
         break;
     case 'update-member.php':
         $page_title = "{$prefix_word} - Member Update";
@@ -64,14 +37,14 @@ switch ($current_page) {
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom stlylesheet -->
-    <link rel="stylesheet" href="../css/bootstrap.minDJ.css" />
+    <link rel="stylesheet" href="../css/bootstrap.minMain.css" />
     <link rel="stylesheet" href="../css/font-awesome.css">
-    <link rel="stylesheet" href="../css/adminstyle_centerDJ.css">
+    <link rel="stylesheet" href="../css/adminstyle_centerMain.css">
     <link rel="shortcut icon" type="x-con" href="../img/music.png">
-    <link rel="icon" href="../img/music.png" />
+    <link rel="icon" href="../img/shutter.png" />
 </head>
 
-<body>
+<body>  
     <!-- HEADER -->
     <div id="header-admin">
         <!-- container -->
@@ -80,7 +53,7 @@ switch ($current_page) {
             <div class="row logo_cover">
                 <!-- LOGO -->
                 <div class="col-md-3 logo_cover">
-                    <h3 class="heading text-center" style="font-weight:700; background:#5C00CE; padding:12px 24px; border-radius:8px; color:#fff;">DJ Rishab</h3>
+                    <h3 class="heading text-center" style="font-weight:700; background:#1769BA; padding:12px 24px; border-radius:8px; color:#fff;">DJ Rishab</h3>
                 </div>
                 <!-- /LOGO -->
                 <!-- LOGO-Out -->
@@ -104,14 +77,14 @@ switch ($current_page) {
 
 
                         <li>
-                            <a href="post-read.php">Events</a>
+                            <a href="post-read.php">Work</a>
                         </li>
 
                         <?php
                         if ($_SESSION['user_role'] == 1) {
                         ?>
                             <li>
-                                <a href="tracks-read.php">Tracks</a>
+                                <a href="team-read.php">Team Member</a>
                             </li>
                             <li>
                                 <a href="youtube-read.php">Youtube Links</a>

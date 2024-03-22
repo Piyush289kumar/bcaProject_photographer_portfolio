@@ -7,10 +7,10 @@ if ($_SESSION['user_role'] == 0) {
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h1 class="admin-heading">Add Work</h1>
+                <h1 class="admin-heading">Add Team Member</h1>
             </div>
             <div class="col-md-2">
-                <a class="add-new" style="background:#E1412E; border-radius:16px; margin-bottom:25px;" href="post-read.php"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                <a class="add-new" style="background:#E1412E; border-radius:16px; margin-bottom:25px;" href="team-read.php"><i class="fa-solid fa-arrow-left"></i> Back</a>
             </div>
             <div class="col-md-offset-3 col-md-6">
                 <!-- Form Start -->
@@ -39,7 +39,7 @@ if ($_SESSION['user_role'] == 0) {
                                 $ndate = mysqli_real_escape_string($conn, $_POST['adate']);
                                 $ntitle = mysqli_real_escape_string($conn, $_POST['atitle']);
                                 $userId = $_SESSION['username'];
-                                $sql_insert_user = "INSERT INTO achievement (adate, atitle, userId, aimg)
+                                $sql_insert_user = "INSERT INTO team (adate, atitle, userId, aimg)
                                     values('{$ndate}','{$ntitle}','{$userId}','{$output_img}')";
                                 if (mysqli_query($conn, $sql_insert_user)) {
                 ?>
@@ -47,14 +47,14 @@ if ($_SESSION['user_role'] == 0) {
                                         alert('Record is added successfully !!')
                                     </script>
                                 <?php
-                                    echo "<script>window.location.href='$hostname/admin/post-read.php'</script>";
+                                    echo "<script>window.location.href='$hostname/admin/team-read.php'</script>";
                                 } else {
                                 ?>
                                     <script>
                                         alert('Record is Not added !!')
                                     </script>
                 <?php
-                                    echo "<script>window.location.href='$hostname/admin/post-read.php'</script>";
+                                    echo "<script>window.location.href='$hostname/admin/team-read.php'</script>";
                                 }
                             }
                         }
@@ -64,15 +64,15 @@ if ($_SESSION['user_role'] == 0) {
                 ?>
                 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Work Date</label>
+                        <label>Record Date</label>
                         <input type="date" name="adate" class="form-control" placeholder="Event Date" required>
                     </div>
                     <div class="form-group">
-                        <label>Work Title</label>
+                        <label>Team Member Name</label>
                         <input type="text" name="atitle" class="form-control" placeholder="Event Title" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Work Poster</label>
+                        <label for="exampleInputPassword1">Team Member Profile</label>
                         <input type="file" name="fileToUpload" required>
                     </div>
                     <input type="submit" name="save" class="btn btn-primary" style="border-radius:16px;" value="Save" required />

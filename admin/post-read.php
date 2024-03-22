@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mb-2">
-                <h5 class="admin-heading">All Event</h5>
+                <h5 class="admin-heading">All Work</h5>
             </div>
             <div class="col-md-2">
                 <a class="add-new" href="post-insert.php" style="border-radius:16px; margin-bottom:25px">Add
-                    Event</a>
+                Work</a>
             </div>
             <div class="col-md-12" style="overflow:scroll">
                 <table class="content-table">
@@ -17,7 +17,6 @@
                         <th>Poster</th>
                         <th>Date</th>
                         <th>Title</th>
-                        <th>Location</th>
                         <th>Edit</th>   
                         <th>Delete</th>
                     </thead>
@@ -51,9 +50,7 @@
                                     <td>
                                         <?php echo ($row['atitle']) ?>
                                     </td>
-                                    <td>
-                                        <?php echo ($row['atype']) ?>
-                                    </td>
+
                                     <td class='edit'><a href='post-update.php?id=<?php echo ($row["aid"]) ?>'><i class='fa fa-edit'></i></a></td>
                                     <td class='delete'><a href='post-delete.php?id=<?php echo ($row["aid"]) ?>'><i class='fa fa-trash'></i></a></td>
                                 </tr>

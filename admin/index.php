@@ -13,11 +13,11 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="../img/music.png" />
+    <link rel="icon" href="../img/shutter.png" />
     <title>ADMIN | Login</title>
-    <link rel="stylesheet" href="../css/bootstrap.minDJ.css" />
+    <link rel="stylesheet" href="../css/bootstrap.minMain.css" />
     <link rel="stylesheet" href="../css/font-awesome.css">
-    <link rel="stylesheet" href="../css/adminstyle_centerDJ.css">
+    <link rel="stylesheet" href="../css/adminstyle_centerMain.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@ if (isset($_SESSION['username'])) {
             <div class="row">
                 <div class="col-md-offset-4 col-md-4">
                     <!-- logo -->
-                    <h3 class="heading text-center" style="font-weight:700; background:#5C00CE; padding:12px 24px; border-radius:8px; color:#fff;">DJ Rishab</h3>
+                    <h3 class="heading text-center" style="font-weight:700; background:#1769BA; padding:12px 24px; border-radius:8px; color:#fff;">Jay Photography</h3>
                     <!-- logo -->
                     <!-- <img class=" logo" src="images/news.jpg"> -->
                     <h3 class="heading text-center" style="font-weight:700">Login</h3>
