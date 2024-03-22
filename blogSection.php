@@ -11,98 +11,30 @@
         <div class="row">
             <div class="latest__slider owl-carousel">
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
+                <!-- PHP CODE -->
+                <?php
+                include("config.php");
+                $sql_show_user = "SELECT * FROM blog WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 0, 6";
+                $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
+                if (mysqli_num_rows($result_sql_show_user) > 0) {
+                    while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
+                ?>
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
+                        <div class="col-lg-4">
+                            <div class="blog__item latest__item">
+                                <h4><?php echo ($row['atitle']) ?></h4>
+                                <ul>
+                                    <li><?php echo ($row['adate']) ?></li>
+                                </ul>
+                                <p><?php echo ($row['ades']) ?></p>
+                            </div>
+                        </div>
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
+                <?php }
+                } ?>
 
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-
-                
             </div>
         </div>
     </div>
