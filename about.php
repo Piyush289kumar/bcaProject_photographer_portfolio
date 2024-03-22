@@ -1,5 +1,4 @@
 <?php include('header.php') ?>
-
 <!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
     <div class="container">
@@ -17,7 +16,6 @@
     </div>
 </div>
 <!-- Breadcrumb End -->
-
 <!-- About Section Begin -->
 <section class="about spad">
     <div class="container">
@@ -75,8 +73,6 @@
     </div>
 </section>
 <!-- About Section End -->
-
-
 <!-- Team Section Begin -->
 <?php include('teamSection.php') ?>
 <!-- Team Section End -->
