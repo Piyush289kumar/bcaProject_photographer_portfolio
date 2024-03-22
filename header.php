@@ -66,7 +66,7 @@
                                 ?>
                                 <li class=<?php echo $isActiveIndex ?>><a href="index.php">Home</a></li>
                                 <li class=<?php echo $isActiveAbout ?>><a href="about.php">About</a></li>
-                                <li class=<?php echo $isActivePortfolio ?>><a href="portfolio.php">Portfolio</a></li>
+                                <li class=<?php echo $isActivePortfolio ?>><a href="portfolio.php">Work</a></li>
                                 <li class=<?php echo $isActiveContact ?>><a href="contact.php">Contact</a></li>
                                 <li><a href="admin/index.php">Login</a></li>
                             </ul>
