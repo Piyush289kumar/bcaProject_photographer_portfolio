@@ -8,16 +8,16 @@
             </div>
             <div class="col-md-2">
                 <a class="add-new" href="post-insert.php" style="border-radius:16px; margin-bottom:25px">Add
-                Work</a>
+                    Work</a>
             </div>
             <div class="col-md-12" style="overflow:scroll">
                 <table class="content-table">
                     <thead>
                         <th>S.No.</th>
                         <th>Poster</th>
-                        <th>Date</th>
                         <th>Title</th>
-                        <th>Edit</th>   
+                        <th>Date</th>
+                        <th>Edit</th>
                         <th>Delete</th>
                     </thead>
                     <tbody>
@@ -44,11 +44,12 @@
                                     <td style="text-align:center;">
                                         <img src="upload/<?php echo ($row['aimg']) ?>" alt="Error" style="height: 75px; border-radius:4px">
                                     </td>
-                                    <td>
-                                        <?php echo ($row['adate']) ?>
-                                    </td>
+
                                     <td>
                                         <?php echo ($row['atitle']) ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($row['adate']) ?>
                                     </td>
 
                                     <td class='edit'><a href='post-update.php?id=<?php echo ($row["aid"]) ?>'><i class='fa fa-edit'></i></a></td>

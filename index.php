@@ -1,4 +1,5 @@
-<?php include("header.php") ?>
+<?php include("header.php");
+include("config.php"); ?>
 
 <!-- Hero Section Begin -->
 <section class="hero">
@@ -114,232 +115,66 @@
 <section class="work">
     <div class="work__gallery">
         <div class="grid-sizer"></div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-2.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-3.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item large__item set-bg" data-setbg="img/work/work-4.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-5.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-6.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-7.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
+
+        <!-- PHP CODE -->
+        <?php
+        $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 0,2";
+        $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
+        if (mysqli_num_rows($result_sql_show_user) > 0) {
+            while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
+        ?>
+
+                <div class="work__item wide__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
+                    <div class="work__item__hover">
+                        <h4><?php echo $row['atitle'] ?></h4>
+                    </div>
+                </div>
+        <?php }
+        } ?>
+
+
+        <?php
+        $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 2,1";
+        $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
+        if (mysqli_num_rows($result_sql_show_user) > 0) {
+            while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
+        ?>
+
+                <div class="work__item large__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
+                    <div class="work__item__hover">
+                        <h4><?php echo $row['atitle'] ?></h4>
+                    </div>
+                </div>
+        <?php }
+        } ?>
+
+        <!-- PHP CODE -->
+        <?php
+        $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 3,2";
+        $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
+        if (mysqli_num_rows($result_sql_show_user) > 0) {
+            while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
+        ?>
+
+                <div class="work__item wide__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
+                    <div class="work__item__hover">
+                        <h4><?php echo $row['atitle'] ?></h4>
+                    </div>
+                </div>
+        <?php }
+        } ?>
+
+
     </div>
 </section>
 <!-- Work Section End -->
 
-
-<!-- Team Section Begin -->
-<section class="team spad set-bg" data-setbg="img/team-bg.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title team__title">
-                    <span>Nice to meet</span>
-                    <h2>OUR Team</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--second set-bg" data-setbg="img/team/team-2.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--third set-bg" data-setbg="img/team/team-3.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--four set-bg" data-setbg="img/team/team-4.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 p-0">
-                <div class="team__btn">
-                    <a href="#" class="primary-btn">Meet Our Team</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Team Section End -->
+<!-- Team Section Start  -->
+<?php include('teamSection.php') ?>
+<!-- Team Section End  -->
 
 <!-- Latest Blog Section Begin -->
-<section class="latest spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title center-title">
-                    <span>Our Blog</span>
-                    <h2>Blog Update</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="latest__slider owl-carousel">
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php include('blogSection.php') ?>
 <!-- Latest Blog Section End -->
 
 <!-- Call To Action Section Begin -->
