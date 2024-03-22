@@ -36,14 +36,15 @@ if (isset($_POST['submit'])) {
     }
     $ndate = mysqli_real_escape_string($conn, $_POST['adate']);
     $ntitle = mysqli_real_escape_string($conn, $_POST['atitle']);
-    $sql_update_user = "UPDATE team SET adate = '{$ndate}', atitle = '{$ntitle}', aimg = '{$save_img_name}' WHERE aid ='{$user_id_getaddbar}'";
+    $ades = mysqli_real_escape_string($conn, $_POST['ades']);
+    $sql_update_user = "UPDATE blog SET adate = '{$ndate}', atitle = '{$ntitle}', ades = '{$ades}', aimg = '{$save_img_name}' WHERE aid ='{$user_id_getaddbar}'";
     if (mysqli_query($conn, $sql_update_user)) {
 ?>
         <script>
             alert('Record is Update successfully !!')
         </script>
     <?php
-        echo "<script>window.location.href='$hostname/admin/team-read.php'</script>";
+        echo "<script>window.location.href='$hostname/admin/blog-read.php'</script>";
     } else {
     ?>
         <script>
@@ -57,17 +58,17 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="admin-heading">Modify Team Member Details</h1>
+                <h1 class="admin-heading">Modify Blog Details</h1>
             </div>
             <div class="col-md-2">
-                <a class="add-new" style="background:#E1412E; border-radius:16px;" href="team-read.php"><i class="fa-solid fa-arrow-left"></i>
+                <a class="add-new" style="background:#E1412E; border-radius:16px;" href="blog-read.php"><i class="fa-solid fa-arrow-left"></i>
                     Back</a>
             </div>
             <div class="col-md-offset-4 col-md-4">
                 <!-- Form Start -->
                 <!-- PHP CODE -->
                 <?php include("config.php");
-                $sql_userdata_show_by_id = "SELECT * FROM team WHERE aid = '{$user_id_getaddbar}'";
+                $sql_userdata_show_by_id = "SELECT * FROM blog WHERE aid = '{$user_id_getaddbar}'";
                 $result_sql_userdata_show_by_id = mysqli_query($conn, $sql_userdata_show_by_id) or die("Query Die!!");
                 if (mysqli_num_rows($result_sql_userdata_show_by_id) > 0) {
                     while ($row = mysqli_fetch_assoc($result_sql_userdata_show_by_id)) {
@@ -81,11 +82,15 @@ if (isset($_POST['submit'])) {
                                 <input type="Date" name="adate" class="form-control" value="<?php echo $row['adate'] ?>" placeholder="Event Date" required>
                             </div>
                             <div class="form-group">
-                                <label>Team Member Name</label>
-                                <input type="text" name="atitle" class="form-control" value="<?php echo $row['atitle'] ?>" placeholder="Event Title" required>
+                                <label>Blog Title</label>
+                                <input type="text" name="atitle" class="form-control" value="<?php echo $row['atitle'] ?>" placeholder="Blog Title" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Team Member Profile</label>
+                                <label>Blog Description</label>
+                                <input type="text" name="ades" class="form-control" value="<?php echo $row['ades'] ?>" placeholder="Blog Title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Blog Poster</label>
                                 <input type="file" name="new-image">
                                 <img src="upload/<?php echo $row['aimg']; ?>" height="150px" style="border-radius: 4px; margin-top:12px;">
                                 <input type="hidden" name="old-image" value="<?php echo $row['aimg']; ?>">

@@ -1,5 +1,4 @@
 <?php include "header.php"; ?>
-
 <div id="admin-content">
     <div class="container">
         <div class="row">
@@ -8,7 +7,7 @@
             </div>
             <div class="col-md-4">
                 <a class="add-new" href="team-insert.php" style="border-radius:16px; margin-bottom:25px">Add
-                Team Member</a>
+                    Team Member</a>
             </div>
             <div class="col-md-12" style="overflow:scroll">
                 <table class="content-table">
@@ -17,7 +16,7 @@
                         <th>Profile</th>
                         <th>Name</th>
                         <th>Date</th>
-                        <th>Edit</th>   
+                        <th>Edit</th>
                         <th>Delete</th>
                     </thead>
                     <tbody>
@@ -45,12 +44,11 @@
                                         <img src="upload/<?php echo ($row['aimg']) ?>" alt="Error" style="height: 75px; border-radius:4px">
                                     </td>
                                     <td>
-                                        <?php echo ($row['adate']) ?>
-                                    </td>
-                                    <td>
                                         <?php echo ($row['atitle']) ?>
                                     </td>
-
+                                    <td>
+                                        <?php echo ($row['adate']) ?>
+                                    </td>
                                     <td class='edit'><a href='team-update.php?id=<?php echo ($row["aid"]) ?>'><i class='fa fa-edit'></i></a></td>
                                     <td class='delete'><a href='team-delete.php?id=<?php echo ($row["aid"]) ?>'><i class='fa fa-trash'></i></a></td>
                                 </tr>

@@ -38,23 +38,24 @@ if ($_SESSION['user_role'] == 0) {
                                 include("config.php");
                                 $ndate = mysqli_real_escape_string($conn, $_POST['adate']);
                                 $ntitle = mysqli_real_escape_string($conn, $_POST['atitle']);
+                                $ades = mysqli_real_escape_string($conn, $_POST['ades']);
                                 $userId = $_SESSION['username'];
-                                $sql_insert_user = "INSERT INTO team (adate, atitle, userId, aimg)
-                                    values('{$ndate}','{$ntitle}','{$userId}','{$output_img}')";
+                                $sql_insert_user = "INSERT INTO blog (adate, atitle, ades, userId, aimg)
+                                    values('{$ndate}','{$ntitle}', '{$ades}','{$userId}','{$output_img}')";
                                 if (mysqli_query($conn, $sql_insert_user)) {
                 ?>
                                     <script>
                                         alert('Record is added successfully !!')
                                     </script>
                                 <?php
-                                    echo "<script>window.location.href='$hostname/admin/team-read.php'</script>";
+                                    echo "<script>window.location.href='$hostname/admin/blog-read.php'</script>";
                                 } else {
                                 ?>
                                     <script>
                                         alert('Record is Not added !!')
                                     </script>
                 <?php
-                                    echo "<script>window.location.href='$hostname/admin/team-read.php'</script>";
+                                    echo "<script>window.location.href='$hostname/admin/blog-read.php'</script>";
                                 }
                             }
                         }
