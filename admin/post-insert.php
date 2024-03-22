@@ -65,11 +65,11 @@ if ($_SESSION['user_role'] == 0) {
                 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Work Date</label>
-                        <input type="date" name="adate" class="form-control" placeholder="Event Date" required>
+                        <input type="date" name="adate" class="form-control" placeholder="Work Date" required>
                     </div>
                     <div class="form-group">
                         <label>Work Title</label>
-                        <input type="text" name="atitle" class="form-control" placeholder="Event Title" required>
+                        <input type="text" name="atitle" class="form-control" placeholder="Work Title" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Work Poster</label>

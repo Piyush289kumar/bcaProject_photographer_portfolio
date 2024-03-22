@@ -7,10 +7,10 @@ if ($_SESSION['user_role'] == 0) {
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h1 class="admin-heading">Add Team Member</h1>
+                <h1 class="admin-heading">Add Blog</h1>
             </div>
             <div class="col-md-2">
-                <a class="add-new" style="background:#E1412E; border-radius:16px; margin-bottom:25px;" href="team-read.php"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                <a class="add-new" style="background:#E1412E; border-radius:16px; margin-bottom:25px;" href="blog-read.php"><i class="fa-solid fa-arrow-left"></i> Back</a>
             </div>
             <div class="col-md-offset-3 col-md-6">
                 <!-- Form Start -->
@@ -64,15 +64,19 @@ if ($_SESSION['user_role'] == 0) {
                 ?>
                 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Record Date</label>
-                        <input type="date" name="adate" class="form-control" placeholder="Record Date" required>
+                        <label>Blog Date</label>
+                        <input type="date" name="adate" class="form-control" placeholder="Blog Date" required>
                     </div>
                     <div class="form-group">
-                        <label>Team Member Name</label>
-                        <input type="text" name="atitle" class="form-control" placeholder="Team Member Name" required>
+                        <label>Blog Title</label>
+                        <input type="text" name="atitle" class="form-control" placeholder="Blog Title" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Team Member Profile</label>
+                        <label>Blog Description</label>
+                        <input type="text" name="ades" class="form-control" placeholder="Blog Description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Blog Poster</label>
                         <input type="file" name="fileToUpload" required>
                     </div>
                     <input type="submit" name="save" class="btn btn-primary" style="border-radius:16px;" value="Save" required />

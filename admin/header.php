@@ -44,7 +44,7 @@ switch ($current_page) {
     <link rel="icon" href="../img/shutter.png" />
 </head>
 
-<body>  
+<body>
     <!-- HEADER -->
     <div id="header-admin">
         <!-- container -->
@@ -53,7 +53,7 @@ switch ($current_page) {
             <div class="row logo_cover">
                 <!-- LOGO -->
                 <div class="col-md-3 logo_cover">
-                    <h3 class="heading text-center" style="font-weight:700; background:#1769BA; padding:12px 24px; border-radius:8px; color:#fff;">DJ Rishab</h3>
+                    <h3 class="heading text-center" style="font-weight:700; background:#1769BA; padding:12px 24px; border-radius:8px; color:#fff;">Jay Photography</h3>
                 </div>
                 <!-- /LOGO -->
                 <!-- LOGO-Out -->
@@ -87,7 +87,7 @@ switch ($current_page) {
                                 <a href="team-read.php">Team Member</a>
                             </li>
                             <li>
-                                <a href="youtube-read.php">Youtube Links</a>
+                                <a href="blog-read.php">Blog</a>
                             </li>
                             <li>
                                 <a href="users.php">Users</a>
