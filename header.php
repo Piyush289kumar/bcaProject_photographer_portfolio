@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Videograph Template">
@@ -10,11 +9,9 @@
     <title>Jay Photography | For creators, by creators.</title>
     <!-- Favicon -->
     <link rel="icon" href="img/shutter.png" />
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -24,13 +21,11 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-
 <body id='cursorCursor'>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container">
@@ -44,10 +39,35 @@
                     <div class="header__nav__option">
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="index.php">Home</a></li>
-                                <li><a href="about.php">About</a></li>
-                                <li><a href="portfolio.php">Portfolio</a></li>
-                                <li><a href="contact.php">Contact</a></li>
+                                <?php
+                                $current_page = basename($_SERVER['PHP_SELF']);
+                                $isActiveIndex = '';
+                                $isActiveAbout = '';
+                                $isActivePortfolio = '';
+                                $isActiveContact = '';
+                                switch ($current_page) {
+                                    case 'index.php':
+                                        $isActiveIndex = 'active';
+                                        break;
+                                    case 'about.php':
+                                        $isActiveAbout = 'active';
+                                        break;
+                                    case 'portfolio.php':
+                                        $isActivePortfolio = 'active';
+                                        break;
+                                    case 'contact.php':
+                                        $isActiveContact = 'active';
+                                        break;
+                                    default:
+                                        $isActiveIndex = '';
+                                        break;
+                                }
+                                echo $current_page;
+                                ?>
+                                <li class=<?php echo $isActiveIndex ?>><a href="index.php">Home</a></li>
+                                <li class=<?php echo $isActiveAbout ?>><a href="about.php">About</a></li>
+                                <li class=<?php echo $isActivePortfolio ?>><a href="portfolio.php">Portfolio</a></li>
+                                <li class=<?php echo $isActiveContact ?>><a href="contact.php">Contact</a></li>
                                 <li><a href="admin/index.php">Login</a></li>
                             </ul>
                         </nav>
