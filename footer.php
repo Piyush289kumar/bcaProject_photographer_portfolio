@@ -10,19 +10,19 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="footer__top__social">
-                        <a href="https://www.facebook.com/jayendra.shakya.54" style='background:#1877F2;'><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/jinnu_._07?igsh=MW5pdnlvM3NuZ3MzcQ%3D%3D" style='background:#FD1D1D;'><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@jayendrashakya8260" style='background:#CD201F;'><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://www.facebook.com/jayendra.shakya.54" style='background:#1877F2;'><i
+                                class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/jinnu_._07?igsh=MW5pdnlvM3NuZ3MzcQ%3D%3D"
+                            style='background:#FD1D1D;'><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@jayendrashakya8260" style='background:#CD201F;'><i
+                                class="fa fa-youtube-play"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 </footer>
 <!-- Footer Section End -->
-
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

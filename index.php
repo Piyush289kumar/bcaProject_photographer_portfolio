@@ -1,6 +1,5 @@
-<?php include("header.php");
-include("config.php"); ?>
-
+<?php include ("header.php");
+include ("config.php"); ?>
 <!-- Hero Section Begin -->
 <section class="hero">
     <div class="hero__slider owl-carousel">
@@ -46,7 +45,6 @@ include("config.php"); ?>
     </div>
 </section>
 <!-- Hero Section End -->
-
 <!-- Services Section Begin -->
 <section class="services spad">
     <div class="container">
@@ -110,73 +108,60 @@ include("config.php"); ?>
     </div>
 </section>
 <!-- Services Section End -->
-
 <!-- Work Section Begin -->
 <section class="work">
     <div class="work__gallery">
         <div class="grid-sizer"></div>
-
         <!-- PHP CODE -->
         <?php
         $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 0,2";
         $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
         if (mysqli_num_rows($result_sql_show_user) > 0) {
             while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
-        ?>
-
+                ?>
                 <div class="work__item wide__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
                     <div class="work__item__hover">
                         <h4><?php echo $row['atitle'] ?></h4>
                     </div>
                 </div>
-        <?php }
+            <?php }
         } ?>
-
-
         <?php
         $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 2,1";
         $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
         if (mysqli_num_rows($result_sql_show_user) > 0) {
             while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
-        ?>
-
+                ?>
                 <div class="work__item large__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
                     <div class="work__item__hover">
                         <h4><?php echo $row['atitle'] ?></h4>
                     </div>
                 </div>
-        <?php }
+            <?php }
         } ?>
-
         <!-- PHP CODE -->
         <?php
         $sql_show_user = "SELECT * FROM achievement WHERE active_record = 'Yes' ORDER BY aid DESC LIMIT 3,2";
         $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
         if (mysqli_num_rows($result_sql_show_user) > 0) {
             while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
-        ?>
-
+                ?>
                 <div class="work__item wide__item set-bg" data-setbg="admin/upload/<?php echo ($row['aimg']) ?>">
                     <div class="work__item__hover">
                         <h4><?php echo $row['atitle'] ?></h4>
                     </div>
                 </div>
-        <?php }
+            <?php }
         } ?>
-
-
     </div>
 </section>
 <!-- Work Section End -->
-
 <!-- Team Section Start  -->
-<?php include('teamSection.php') ?>
+<?php include ('teamSection.php') ?>
 <!-- Team Section End  -->
-
 <!-- Latest Blog Section Begin -->
-<?php include('blogSection.php') ?>
+<?php include ('blogSection.php') ?>
 <!-- Latest Blog Section End -->
-
 <!-- Call To Action Section Begin -->
 <section class="callto spad set-bg" data-setbg="img/callto-bg.jpg">
     <div class="container">
@@ -193,5 +178,4 @@ include("config.php"); ?>
     </div>
 </section>
 <!-- Call To Action Section End -->
-
-<?php include("footer.php") ?>
+<?php include ("footer.php") ?>
