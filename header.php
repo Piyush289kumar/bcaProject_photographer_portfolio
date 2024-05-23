@@ -12,7 +12,8 @@
     <link rel="icon" href="img/shutter.png" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -34,7 +35,8 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="index.php" style='color:#fff; font-size:20px; padding-top:8px; font-weight:900;'>Jay Photography</a>
+                        <a href="index.php" style='color:#fff; font-size:20px; padding-top:8px; font-weight:900;'>Jay
+                            Photography</a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -74,7 +76,8 @@
                         </nav>
                         <div class="header__nav__social">
                             <a href="https://www.facebook.com/jayendra.shakya.54"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/jinnu_._07?igsh=MW5pdnlvM3NuZ3MzcQ%3D%3D"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/jinnu_._07?igsh=MW5pdnlvM3NuZ3MzcQ%3D%3D"><i
+                                    class="fa fa-instagram"></i></a>
                             <a href="https://www.youtube.com/@jayendrashakya8260"><i class="fa fa-youtube-play"></i></a>
                         </div>
                     </div>
